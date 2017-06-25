@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"; http-equiv="content-type" content="text/html">
+    <title>龙猫</title>
+    <style type="text/css">
+        div.尾巴{
+            width: 20px;
+            height: 50px;
+            background: #727564;
+            border-radius: 0 0 10px 10px/20px;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+            border: 0.5px solid #484e42;
+            border-top: 50px transparent;
+            z-index: -1;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            -moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            -o-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            -webkit-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            animation:摆动 5s infinite;
+        }
+         @keyframes  摆动{
+            0% {transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+            50% {transform: rotatex(50deg); background:rgba(125,125,125,1)}
+            100% {transform: rotatex(-50deg);background:rgba(125,125,125,0.8) }
+        }
+        @-webkit-keyframes 摆动{
+            0% {-webkit-transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+            50% {-webkit-transform: rotatex(50deg); background:rgba(125,125,125,1)}
+            100% {-webkit-transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+        }
+        @-moz-keyframes 摆动{
+            0% {-moz-transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+            50% {-moz-transform: rotatex(50deg); background:rgba(125,125,125,1)}
+            100% {-moz-transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+        }
+        @-o-keyframes 摆动{
+            0% {-o-transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+            50% {-o-transform: rotatex(50deg); background:rgba(125,125,125,1)}
+            100% {-o-transform: rotatex(-50deg); background:rgba(125,125,125,0.8)}
+        }
+        div.树{
+            width: 150px;
+            height: 20px;
+            background: #966400;
+            position: absolute;
+            left: 225px;
+            top: 295px;
+            z-index: 0;
+            box-shadow: -5px 5px 10px rgba(0,0,0,0.8),3px -3px 15px #885533 inset;
+            -moz-box-shadow: -5px 5px 10px rgba(0,0,0,0.8),3px -3px 15px #885533 inset;
+            -o-box-shadow: -5px 5px 10px rgba(0,0,0,0.8),3px -3px 15px #885533 inset;
+            -webkit-box-shadow: -5px 5px 10px rgba(0,0,0,0.8),3px -3px 15px #885533 inset;
+        }
+        div.树::after {
+            width: 0;
+            height: 0;
+            background: #ffffff;
+            content: "";
+            position: relative;
+            top: -25px;
+            border-bottom: 10px solid #966400;
+            border-left: 150px solid #fff;
+
+            z-index: 0;
+        }
+        #肚子{
+            width: 70px;
+            height: 80px;
+            background: #dfdc97;
+            border-radius: 35px/40px;
+            position:relative;
+            left: 265px;
+            top: 215px;
+            z-index: 1;
+            border: 0.5px solid #484e42;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.8),10px -10px 5px #aca554 inset;
+            -moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),10px -10px 5px #aca554 inset;
+            -o-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),10px -10px 5px #aca554 inset;
+            -webkit-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),10px -10px 5px #aca554 inset;
+        }
+        #翎1{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 18px;
+            top: 15px;
+            z-index: 2;
+            transform: rotate(45deg);
+            -webkit-transform:rotate(45deg) ;
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+        #翎1::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: 2.53px;
+            top: 2.53px;
+            z-index: 3;
+        }
+        #翎2{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 32px;
+            top: -1px;
+            z-index: 2;
+            transform: rotate(90deg);
+            -webkit-transform:rotate(90deg) ;
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+        }
+        #翎2::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: 3.5px;
+            top: 0px;
+            z-index: 3;
+        }
+        #翎3{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 47px;
+            top: -12px;
+            z-index: 2;
+            transform: rotate(-45deg);
+            -webkit-transform:rotate(-45deg) ;
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+        }
+        #翎3::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: -2.53px;
+            top: 2.53px;
+            z-index: 3;
+        }
+        #翎4{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 13px;
+            top: -10px;
+            z-index: 2;
+
+        }
+        #翎4::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: 0px;
+            top: 4.5px;
+            z-index: 3;
+        }
+        #翎5{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 26px;
+            top: -23.5px;
+            z-index: 2;
+        }
+        #翎5::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: 0px;
+            top: 4.5px;
+            z-index: 3;
+        }
+        #翎6{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 39px;
+            top: -36.5px;
+            z-index: 2;
+        }
+        #翎6::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: 0px;
+            top: 4.5px;
+            z-index: 3;
+        }
+        #翎7{
+            width: 8px;
+            height: 13px;
+            background: #727564;
+            border-radius: 8px/13px;
+            position:relative;
+            left: 51.5px;
+            top: -49.5px;
+            z-index: 2;
+        }
+        #翎7::before{
+            content: "";
+            width: 8px;
+            height: 13px;
+            background: #dfdc97;
+            border-radius: 8px/13px;
+            position:absolute;
+            left: 0px;
+            top: 4.5px;
+            z-index: 3;
+        }
+        div.右腿{
+            width: 20px;
+            height: 50px;
+            background: #727564;
+            border-radius: 0 0 10px 10px/20px;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+            border: 0.5px solid #484e42;
+            border-top: 50px transparent;
+            z-index: -1;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            -moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            -o-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+            -webkit-box-shadow: -2px 2px 5px rgba(0,0,0,0.8),5px -5px 15px #484e42 inset;
+        }
+    </style>
+</head>
+<body>
+<div class="尾巴"></div>
+<div class="树"></div>
+<div id="肚子">
+    <div id="翎1"></div>
+    <div id="翎2"></div>
+    <div id="翎3"></div>
+    <div id="翎4"></div>
+    <div id="翎5"></div>
+    <div id="翎6"></div>
+    <div id="翎7"></div>
+</div>
+<div class="右腿">
+    <div class="右脚掌"></div>
+    <div class="右脚掌心"></div>
+    <div class="右爪子1"></div>
+    <div class="右爪子2"></div>
+    <div class="右爪子3"></div>
+
+</div>
+</body>
+</html>
